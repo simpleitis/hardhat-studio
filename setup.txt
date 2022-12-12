@@ -1,0 +1,18 @@
+Run 'yarn init'
+
+Run 'yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv @openzeppelin/contracts'
+
+Create '.prettierignore' and 'prettierrc'
+
+For linting we would be using 'solhint', so we need to create '.solhint.json' and '.solhintignore'
+
+Create 'hardhat.config.js'
+
+Create '.env'
+
+Create 'utils' folder
+
+'hh node' runs our deploy scripts
+
+To run scripts we can use 'hh run scripts/[script_name].js --network localhost', we are usign local host here because in order to run scripts we need an running network
+
