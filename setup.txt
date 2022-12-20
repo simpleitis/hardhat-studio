@@ -14,5 +14,5 @@ Create 'utils' folder
 
 'hh node' runs our deploy scripts
 
-To run scripts we can use 'hh run scripts/[script_name].js --network localhost', we are usign local host here because in order to run scripts we need an running network
+To run scripts we can use 'hh run scripts/[script_name].js --network localhost', we are usign local host here because in order to run scripts we need an running network ie either a local node or a real test network
 

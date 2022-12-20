@@ -23,7 +23,7 @@ contract NftMarketPlace is ReentrancyGuard {
 
     event ItemListed(
         address indexed seller,
-        address indexed nftAddres,
+        address indexed nftAddress,
         uint256 indexed tokenId,
         uint256 price
     );
@@ -47,10 +47,6 @@ contract NftMarketPlace is ReentrancyGuard {
     // Seller address -> Amount erned
     mapping(address => uint256) private s_proceeds;
 
-    /////////////////////////
-    ///// Modifier /////////
-    ////////////////////////
-
     modifier notListed(
         address nftAddress,
         uint256 tokenId,
@@ -60,7 +56,6 @@ contract NftMarketPlace is ReentrancyGuard {
         if (listing.price > 0) {
             revert NftMarketplace__AlreadyListed(nftAddress, tokenId);
         }
-        // _; is used to specify whether we want to execute the function which uses this modifier after we perform the above check or before we perform the above check
         _;
     }
 
@@ -85,9 +80,6 @@ contract NftMarketPlace is ReentrancyGuard {
         _;
     }
 
-    /////////////////////////
-    //////Main Functions////
-    /////////////////////////
     /*
      * @notice Method for listing NFT
      * @param nftAddress Address of NFT contract
